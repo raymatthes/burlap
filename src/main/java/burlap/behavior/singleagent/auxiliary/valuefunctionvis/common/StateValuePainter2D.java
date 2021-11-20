@@ -237,9 +237,14 @@ public class StateValuePainter2D extends StateValuePainter {
 		g2.fill(new Rectangle2D.Float(xval, yval, width, height));
 		
 		if(this.renderValueString){
-			
+
+			RenderingHints rh = new RenderingHints(
+					RenderingHints.KEY_TEXT_ANTIALIASING,
+					RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+			g2.setRenderingHints(rh);
+
 			g2.setColor(this.vsFontColor);
-			g2.setFont(new Font("sansserif", Font.BOLD, this.vsFontSize));
+			g2.setFont(new Font(null, Font.BOLD, this.vsFontSize));
 			String fstring = String.format("%."+this.vsPrecision+"f", value);
 			
 			float sxval = xval + this.vsOffsetFromLeft*width;

@@ -6,3 +6,4 @@ output
 target
 .idea
 out
+dependency-reduced-pom.xml

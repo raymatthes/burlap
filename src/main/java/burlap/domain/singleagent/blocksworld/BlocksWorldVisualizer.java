@@ -105,9 +105,13 @@ public class BlocksWorldVisualizer {
 
 			g2.fill(new Rectangle2D.Float(rx + (hGap), ry, blockWidth - 2*hGap, blockHeight));
 
+			RenderingHints rh = new RenderingHints(
+					RenderingHints.KEY_TEXT_ANTIALIASING,
+					RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+			g2.setRenderingHints(rh);
 
 			g2.setColor(Color.black);
-			g2.setFont(new Font("Helvetica", Font.PLAIN, fontSize));
+			g2.setFont(new Font(null, Font.PLAIN, fontSize));
 
 			String valueString = ob.name();
 			int stringLen = (int)g2.getFontMetrics().getStringBounds(valueString, g2).getWidth();

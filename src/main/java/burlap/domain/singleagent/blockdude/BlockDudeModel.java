@@ -242,6 +242,10 @@ public class BlockDudeModel implements FullStateModel {
 
 		int nx = ax + dir;
 
+		if(nx < 0 || nx >= maxx){
+			return;
+		}
+
 		int heightAtNX = greatestHeightBelow(s, map, maxx, nx, ay+1);
 		if(heightAtNX > ay){
 			return; //cannot drop block if walled off from throw position

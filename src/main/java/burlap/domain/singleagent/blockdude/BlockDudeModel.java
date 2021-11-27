@@ -44,10 +44,10 @@ public class BlockDudeModel implements FullStateModel {
 		else if(aname.equals(ACTION_UP)){
 			moveUp(bs);
 		}
-		else if(aname.equals(ACTION_PICKUP)){
+		else if(aname.equals(ACTION_PUT_DOWN)){
 			putdownBlock(bs);
 		}
-		else if(aname.equals(ACTION_PUT_DOWN)){
+		else if(aname.equals(ACTION_PICKUP)){
 			pickupBlock(bs);
 		}
 		else {
